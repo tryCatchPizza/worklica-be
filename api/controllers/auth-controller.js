@@ -11,7 +11,7 @@ exports.authenticate = (req, res) => {
                 username: found.username,
                 role: found.role
             };
-            let token = jwt.sign(payload, 'sikret');
+            let token = jwt.sign(payload, 'SUPER_SECRET');
             res.status(200).send({ accessToken: token });
         } else {
             res.status(404).send({});
@@ -26,7 +26,7 @@ exports.validateJwt = (req, res, next) => {
             if (authorization[0] !== 'Bearer') {
                 return res.status(401).send();
             } else {
-                req.jwt = jwt.verify(authorization[1], 'sikret');
+                req.jwt = jwt.verify(authorization[1], 'SUPER_SECRET');
                 return next();
             }
         } catch (err) {
