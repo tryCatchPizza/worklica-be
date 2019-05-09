@@ -1,0 +1,33 @@
+{
+    "users": [
+        {
+            "username": "josip123",
+            "email": "josip12345",
+            "password": "josip",
+            "role": "User"
+        },
+        {
+            "username": "admin",
+            "password": "admin",
+            "email": "admin@worklica.hr",
+            "role": "Administrator"
+        },
+        {
+            "username": "guest",
+            "email": "guest",
+            "password": "guest",
+            "role": "Guest"
+        },
+        {
+            "username": "josip",
+            "email": "josip@josip",
+            "password": "josip",
+            "role": "User"
+        }
+    ],
+    "roles": [
+        "Administrator",
+        "User",
+        "Guest"
+    ]
+}
