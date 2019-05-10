@@ -6,7 +6,7 @@ exports.authenticate = (req, res) => {
     fs.readFile('db.json', 'utf8', (err, data) => {
         jsonData = JSON.parse(data);
         let found = jsonData.users.find(u => u.username === req.body.username);
-        if (found) {
+        if (found && found.password === req.body.password) {
             const payload = {
                 username: found.username,
                 role: found.role
@@ -14,7 +14,7 @@ exports.authenticate = (req, res) => {
             let token = jwt.sign(payload, 'SUPER_SECRET');
             res.status(200).send({ accessToken: token });
         } else {
-            res.status(404).send({});
+            res.status(401).send({message: 'Inavlid credentials'});
         }
     });
 }
