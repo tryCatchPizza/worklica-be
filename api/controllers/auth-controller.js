@@ -14,7 +14,7 @@ exports.authenticate = (req, res) => {
             let token = jwt.sign(payload, 'SUPER_SECRET');
             res.status(200).send({ accessToken: token });
         } else {
-            res.status(401).send({message: 'Inavlid credentials'});
+            res.status(401).send({message: 'Invalid credentials'});
         }
     });
 }
