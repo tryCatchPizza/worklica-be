@@ -70,7 +70,7 @@ exports.updateUser = (req, res) => {
         jsonData.users.splice(userIndex, 1);
         jsonData.users.push(req.body);
         fs.writeFile('db.json', JSON.stringify(jsonData), () => {
-            res.status(200).send(jsonData);
+            res.status(200).send(jsonData.users);
         })
     });
 }

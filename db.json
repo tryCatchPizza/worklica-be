@@ -1,9 +1,9 @@
 {
-    "users": [
+    "users":[
         {
-            "username": "josip123",
-            "email": "josip12345",
-            "password": "josip",
+            "username": "user",
+            "email": "user@worklica.hr",
+            "password": "user",
             "role": "User"
         },
         {
@@ -11,23 +11,10 @@
             "password": "admin",
             "email": "admin@worklica.hr",
             "role": "Administrator"
-        },
-        {
-            "username": "guest",
-            "email": "guest",
-            "password": "guest",
-            "role": "Guest"
-        },
-        {
-            "username": "josip",
-            "email": "josip@josip",
-            "password": "josip",
-            "role": "User"
         }
     ],
-    "roles": [
+    "roles":[
         "Administrator",
-        "User",
-        "Guest"
+        "User"
     ]
 }
