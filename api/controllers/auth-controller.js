@@ -46,7 +46,7 @@ exports.getAllUsers = (req, res) => {
     }
 }
 
-exports .getRoles = (req, res) => {
+exports.getRoles = (req, res) => {
     fs.readFile('db.json', 'utf-8', (err, data) => {
         jsonData = JSON.parse(data);
         res.status(200).send(jsonData.roles);
